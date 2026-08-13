@@ -73,3 +73,27 @@ export const createProduct = async (req, res) => {
   }
 };
 
+export const getProducts = async (req, res) => {
+  try {
+    const products = await prisma.product.findMany({
+      include: {
+        categories: {
+          include: {
+            category: true,
+          },
+        },
+      },
+      orderBy: {
+        id: "asc",
+      },
+    });
+
+    return res.status(200).json(products);
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      message: "Server error",
+    });
+  }
+};
