@@ -19,5 +19,9 @@
 - implement schema database 
 - kiem tra : npx prisma format , npx prisma validate
 - run npx prisma migrate dev --name init
+-------------------------------------
+- ket noi prisma client voi express
+- implement prisma.js
+
 
 
