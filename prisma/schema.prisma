@@ -13,3 +13,32 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+enum CategoryStatus {
+  ACTIVE
+  INACTIVE
+}
+
+model Category {
+  id      Int               @id @default(autoincrement())
+  name    String
+  status  CategoryStatus    @default(ACTIVE)
+  product CategoryProduct[]
+}
+
+model Product {
+  id         Int               @id @default(autoincrement())
+  name       String
+  price      Decimal           @db.Decimal(10, 2)
+  categories CategoryProduct[]
+}
+
+model CategoryProduct {
+  categoryId Int
+  productId  Int
+
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  product  Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([categoryId, productId])
+}
