@@ -8,3 +8,12 @@
 - tao file server.js
 - npm run dev
 - test POSTMAN
+
+- cai dat va cau hinh prisma : npm install prisma@6 --save-dev
+- npm install @prisma/client@6
+- kiem tra : npx prisma , -v : prisma: 6.19.3 , @prisma/client : 6.19.3
+- tao db: express_prisma_shop
+- sua env mysql://root:@127.0.0.1:3306/express_prisma_shop
+- test cau hinh prisma : npx prisma validate , npx prisma format
+
+
