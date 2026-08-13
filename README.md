@@ -25,6 +25,7 @@
 -------------------------------------
 - POST Category
 - implement category controller
+- impl category route 
 
 
 

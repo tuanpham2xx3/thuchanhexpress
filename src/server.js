@@ -1,4 +1,5 @@
 import express from "express";
+import categoryRoute from "./routes/category.route.js";
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.get("/", (req, res) => {
     message: "Server is running",
   });
 });
+
+app.use("/api/categories", categoryRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
