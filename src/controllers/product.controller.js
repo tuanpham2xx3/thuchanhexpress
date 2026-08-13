@@ -75,7 +75,16 @@ export const createProduct = async (req, res) => {
 
 export const getProducts = async (req, res) => {
   try {
+    const { search } = req.query;
+
     const products = await prisma.product.findMany({
+      where: search
+        ? {
+            name: {
+              contains: search,
+            },
+          }
+        : {},
       include: {
         categories: {
           include: {
