@@ -39,6 +39,10 @@
 - sua server.js
 
 ---
-- GET danh sach 
 - Search Category
 - impl getCategory
+---
+-- Get by ID category
+---
+-- PUT category
+
