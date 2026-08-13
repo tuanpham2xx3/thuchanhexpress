@@ -6,3 +6,5 @@
 - npm install --save-dev nodemon
 
 - tao file server.js
+- npm run dev
+- test POSTMAN
