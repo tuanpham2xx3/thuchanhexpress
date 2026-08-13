@@ -20,3 +20,27 @@ export const createCategory = async (req, res) => {
     });
   }
 };
+
+export const getCategories = async (req, res) => {
+  try {
+    const { search } = req.query;
+
+    const categories = await prisma.category.findMany({
+      where: search
+        ? {
+            name: {
+              contains: search,
+            },
+          }
+        : {},
+    });
+
+    return res.status(200).json(categories);
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      message: "Server error",
+    });
+  }
+};

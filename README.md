@@ -37,3 +37,8 @@
 - implement category controller
 - impl category route
 - sua server.js
+
+---
+- GET danh sach 
+- Search Category
+- impl getCategory
