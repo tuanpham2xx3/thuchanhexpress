@@ -42,7 +42,15 @@
 - Search Category
 - impl getCategory
 ---
--- Get by ID category
+- Get by ID category
+
 ---
--- PUT category
+- PUT category
+
+---
+- DELETE category
+
+---
+
+
 
