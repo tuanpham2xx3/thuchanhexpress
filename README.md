@@ -22,6 +22,9 @@
 -------------------------------------
 - ket noi prisma client voi express
 - implement prisma.js
+-------------------------------------
+- POST Category
+- implement category controller
 
 
 
