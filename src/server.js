@@ -1,5 +1,6 @@
 import express from "express";
 import categoryRoute from "./routes/category.route.js";
+import productRoute from "./routes/product.route.js";
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/categories", categoryRoute);
+app.use("/api/products", productRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

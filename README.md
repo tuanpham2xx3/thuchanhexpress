@@ -39,18 +39,23 @@
 - sua server.js
 
 ---
+
 - Search Category
 - impl getCategory
+
 ---
+
 - Get by ID category
 
 ---
+
 - PUT category
 
 ---
+
 - DELETE category
 
 ---
 
-
-
+- POST product
+- GET product
